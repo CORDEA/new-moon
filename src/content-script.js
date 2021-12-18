@@ -9,6 +9,7 @@ function main() {
         position: fixed;
         top: 0;
         background: #0000004d;
+        pointer-events: none;
         `
     );
     body.appendChild(div);
