@@ -1,6 +1,13 @@
 function main() {
     const [body] = document.getElementsByTagName('body');
+    const foreground = body.getElementsByClassName('new-moon-foreground');
+    if (foreground.length > 0) {
+        body.removeChild(foreground[0]);
+        return;
+    }
+
     const div = document.createElement('div');
+    div.setAttribute('class', 'new-moon-foreground');
     div.setAttribute(
         'style',
         `
