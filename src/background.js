@@ -9,3 +9,7 @@ chrome.runtime.onInstalled.addListener(() => {
         }
     });
 });
+
+chrome.contextMenus.onClicked.addListener(async _ => {
+    const [tab] = await chrome.tabs.query({active: true, currentWindow: true});
+});
